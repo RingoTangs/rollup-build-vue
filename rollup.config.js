@@ -9,7 +9,6 @@ import postcss from 'rollup-plugin-postcss'
 import babel from '@rollup/plugin-babel'
 import terser from '@rollup/plugin-terser'
 
-
 export default defineConfig({
   input: './src/index.ts',
   output: {
@@ -20,19 +19,19 @@ export default defineConfig({
   },
   plugins: [
     clear({ targets: ['dist'] }),
-    typescript({ tsconfig: './tsconfig.json' }),
     nodeResolve(),
-    postcss({
-      extract: true,
-      minimize: true,
-      plugins: [autoprefixer()],
-    }),
+    typescript({ tsconfig: './tsconfig.json' }),
     commonjs(),
     babel({
       presets: ['@babel/preset-env', '@babel/preset-typescript'],
       plugins: ['@vue/babel-plugin-jsx'],
       extensions: ['.ts', '.tsx'],
       babelHelpers: 'bundled',
+    }),
+    postcss({
+      extract: true,
+      minimize: true,
+      plugins: [autoprefixer()],
     }),
     terser(),
   ],
