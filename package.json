@@ -2,14 +2,20 @@
   "name": "rollup-build-vue",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.js",
+  "description": "Rollup Build Vue Components With tsx",
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/index.css",
   "scripts": {
     "play": "vite play",
+    "build-test": "vite build-test",
     "build": "rollup --config rollup.config.js"
   },
+  "files": [
+    "./dist"
+  ],
   "keywords": [],
-  "author": "",
+  "author": "RingoTangs",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.6",
