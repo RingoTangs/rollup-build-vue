@@ -8,7 +8,6 @@
   "style": "./dist/index.css",
   "scripts": {
     "play": "vite play",
-    "build-test": "vite build-test",
     "build": "rollup --config rollup.config.js"
   },
   "files": [
