@@ -8,6 +8,7 @@
   "style": "./dist/index.css",
   "scripts": {
     "play": "vite play",
+    "prettier": "prettier --write ./src/*.{ts,tsx,css}",
     "build": "rollup --config rollup.config.js && tsc --declaration --emitDeclarationOnly"
   },
   "files": [
