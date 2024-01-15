@@ -1,7 +1,6 @@
 // 参考链接： https://juejin.cn/post/7313557322596171815
 import { defineConfig } from 'rollup'
 import autoprefixer from 'autoprefixer'
-import clear from 'rollup-plugin-clear'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
@@ -18,7 +17,6 @@ export default defineConfig({
     preserveModules: true,
   },
   plugins: [
-    clear({ targets: ['dist'] }),
     nodeResolve(),
     typescript({ tsconfig: './tsconfig.json' }),
     commonjs(),
